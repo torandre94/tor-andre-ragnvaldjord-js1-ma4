@@ -10,10 +10,10 @@ async function callApi() {
 
     results.forEach(function (result) {
         resultsContainer.innerHTML +=   `<a href="question3.html?id=${result.id}">
-                                        <h3>${result.name}</h3>
-                                        <p>Rating: ${result.rating}</p>
-                                        <time>Released: ${result.released}</time>
-                                        <img src="${result.background_image}" alt="${result.name}" />
+                                            <h3>${result.name}</h3>
+                                            <p>Rating: ${result.rating}</p>
+                                            <p>Released: ${result.released}</p>
+                                            <img src="${result.background_image}" alt="${result.name}" />
                                         </a>`;
                                         
     });
