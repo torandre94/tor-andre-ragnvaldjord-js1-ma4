@@ -10,11 +10,15 @@ const url = "https://api.rawg.io/api/games/" + id;
 
 async function fetchGame() {
 
+    try {
         const response = await fetch(url);
         const details = await response.json();
 
         createHtml(details);
-    
+    }
+    catch(error) {
+        detailContainer.innerHTML = "An error has occurred!"
+    }
 }
 
 fetchGame();
